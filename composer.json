@@ -1,0 +1,7 @@
+{
+    "name": "gigabait-official/nexus",
+    "type": "project",
+    "require-dev": {
+        "phpstan/phpstan": "^1.4"
+    }
+}

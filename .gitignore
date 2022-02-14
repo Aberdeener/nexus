@@ -1,11 +1,14 @@
 *
 /*
+.vscode
+.vscode/sftp.json
 !custom/templates/Nexus/
 !custom/panel_templates/Default/nexus/
 !modules/Nexus/
 !README.html
 !README.md
-!create_release.sh
+!composer.json
+!composer.lock
+!phpstan.neon
 !.gitignore
-.vscode
-.vscode/sftp.json
+!.github/*
