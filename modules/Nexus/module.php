@@ -48,7 +48,7 @@ class Nexus extends Module
   {
 
     PermissionHandler::registerPermissions($this->module_name, array(
-      'admincp.nexus' => NexusUtill::getLanguage('general', 'group_permision')
+      'admincp.nexus' => NexusUtil::getLanguage('general', 'group_permision')
     ));
 
     // Widgets
@@ -74,13 +74,13 @@ class Nexus extends Module
           'USER_LOGIN' => 1
         ));
       }
-      $settings_data = NexusUtill::getSettingsToSmarty();
+      $settings_data = NexusUtil::getSettingsToSmarty();
       $smarty->assign($settings_data);
 
       if ($cache->isCached('ds_status_ping')) {
         $discord_server = $cache->retrieve('ds_status_ping');
       } else {
-        $discord_server = NexusUtill::getDsServer($settings_data['DISCORD_ID']);
+        $discord_server = NexusUtil::getDsServer($settings_data['DISCORD_ID']);
       }
       $cache->store('ds_status_ping', $discord_server, 60);
       $smarty->assign(array(
@@ -90,7 +90,7 @@ class Nexus extends Module
 
     if (defined('BACK_END')) {
 
-      $title = NexusUtill::getLanguage('general', 'title');
+      $title = NexusUtil::getLanguage('general', 'title');
 
       if ($user->hasPermission('admincp.nexus')) {
 
